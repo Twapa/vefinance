@@ -257,21 +257,21 @@ if __name__ == '__main__':
     data = data[data.index < '01-01-2020']
     arr = data['close'].to_numpy()
     pip_miner = PIPPatternMiner(n_pips=5, lookback=24, hold_period=6)
-    pip_miner.train(arr, n_reps=-1)
+    # pip_miner.train(arr,-1)
 
-    '''
+
     # Monte Carlo test, takes about an hour..
-    pip_miner.train(arr, n_reps=100)
+    pip_miner.train(arr, n_reps=-1)
     
-    plt.style.use('dark_background')
-    actual_martin = pip_miner.get_fit_martin()
-    perm_martins = pip_miner.get_permutation_martins()
-    ax = pd.Series(perm_martins).hist()
-    ax.set_ylabel("# Of Permutations")
-    ax.set_xlabel("Martin Ratio")
-    ax.set_title("Permutation's Martin Ratio BTC-USDT 1H 2018-2020")
-    ax.axvline(actual_martin, color='red')
-    '''
+    # plt.style.use('dark_background')
+    # actual_martin = pip_miner.get_fit_martin()
+    # perm_martins = pip_miner.get_permutation_martins()
+    # ax = pd.Series(perm_martins).hist()
+    # ax.set_ylabel("# Of Permutations")
+    # ax.set_xlabel("Martin Ratio")
+    # ax.set_title("Permutation's Martin Ratio BTC-USDT 1H 2018-2020")
+    # ax.axvline(actual_martin, color='red')
+    
 
 
 
