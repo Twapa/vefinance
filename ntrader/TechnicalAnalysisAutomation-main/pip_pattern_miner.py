@@ -263,14 +263,14 @@ if __name__ == '__main__':
     # Monte Carlo test, takes about an hour..
     pip_miner.train(arr, n_reps=-1)
     
-    # plt.style.use('dark_background')
-    # actual_martin = pip_miner.get_fit_martin()
-    # perm_martins = pip_miner.get_permutation_martins()
-    # ax = pd.Series(perm_martins).hist()
-    # ax.set_ylabel("# Of Permutations")
-    # ax.set_xlabel("Martin Ratio")
-    # ax.set_title("Permutation's Martin Ratio BTC-USDT 1H 2018-2020")
-    # ax.axvline(actual_martin, color='red')
+    plt.style.use('dark_background')
+    actual_martin = pip_miner.get_fit_martin()
+    perm_martins = pip_miner.get_permutation_martins()
+    ax = pd.Series(perm_martins).hist()
+    ax.set_ylabel("# Of Permutations")
+    ax.set_xlabel("Martin Ratio")
+    ax.set_title("Permutation's Martin Ratio BTC-USDT 1H 2018-2020")
+    ax.axvline(actual_martin, color='red')
     
 
 
