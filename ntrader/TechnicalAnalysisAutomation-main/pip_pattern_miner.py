@@ -41,6 +41,8 @@ class PIPPatternMiner:
 
     def get_permutation_martins(self):
         return self._perm_martins
+    
+
 
     def plot_cluster_examples(self, candle_data: pd.DataFrame, cluster_i: int, grid_size: int = 5):
         plt.style.use('dark_background')
